@@ -1,4 +1,56 @@
 package com.minimarket.entity;
+
+import jakarta.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "produk")
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_produk;
+
+    private String kode_barang;
+
+    private String nama_produk;
+
+    private Long id_kategori;
+
+    private Long id_supplier;
+
+    private BigDecimal harga_beli;
+
+    private BigDecimal harga_jual;
+
+    private Integer stok;
+
+    private String satuan;
+
+    private LocalDate expired_date;
+
+    public Long getId_produk() {
+        return id_produk;
+    }
+
+    public void setId_produk(Long id_produk) {
+        this.id_produk = id_produk;
+    }
+
+    public String getKode_barang() {
+        return kode_barang;
+    }
+
+    public void setKode_barang(String kode_barang) {
+        this.kode_barang = kode_barang;
+    }
+
+    public String getNama_produk() {
+        return nama_produk;
+    }
+
+    public void setNama_produk(String nama_produk) {
         this.nama_produk = nama_produk;
     }
 
