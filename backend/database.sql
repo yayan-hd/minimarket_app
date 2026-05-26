@@ -1,6 +1,3 @@
-CREATE DATABASE minimarket;
-USE minimarket;
-
 CREATE TABLE kategori (
     id_kategori INT AUTO_INCREMENT PRIMARY KEY,
     nama_kategori VARCHAR(100),
